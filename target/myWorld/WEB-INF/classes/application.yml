@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: utf-8
+
+
+#jdbc:mysql://127.0.0.1:3306/me
+#ten
+#com.mysql.jdbc.Driver
+spring:
+  datasource:
+#    url: jdbc:oracle:thin:@192.168.1.185:1521:orcl
+#    username: zenss
+#    password: zenss
+#    driver-class-name: oracle.jdbc.driver.OracleDriver 
+    url: jdbc:mysql://127.0.0.1:3306/me
+    username: ten
+    password: ten
+    driver-class-name: com.mysql.jdbc.Driver 
+
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+    static-path-pattern: /**

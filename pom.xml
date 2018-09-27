@@ -1,0 +1,153 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.world</groupId>
+  <artifactId>myWorld</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>myWorld Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  
+  <parent>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-parent</artifactId>
+	<version>1.5.9.RELEASE</version>
+	<relativePath/>
+  </parent>
+  
+  <dependencies>
+    <!-- spring boot 基础包 -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+ 	</dependency>
+    
+    <!-- spring boot jpa数据库 -->
+    <dependency>
+	  	<groupId>org.springframework.boot</groupId>
+	  	<artifactId>spring-boot-starter-data-jpa</artifactId>
+	</dependency>
+	
+	<!-- spring boot 热更新 -->
+	<dependency>
+    	<groupId>org.springframework.boot</groupId>
+    	<artifactId>spring-boot-devtools</artifactId>
+    	<optional>true</optional>
+    	<scope>true</scope>
+	</dependency>
+	
+	<!-- Spring Security -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    </dependency>
+    <!-- <dependency>
+        <groupId>org.thymeleaf.extras</groupId>
+        <artifactId>thymeleaf-extras-springsecurity4</artifactId>
+    </dependency> -->
+	
+	<!-- 数据库驱动 -->
+
+	<dependency>
+	  	<groupId>mysql</groupId>
+	  	<artifactId>mysql-connector-java</artifactId>
+	</dependency>
+	<!-- <dependency>
+		<groupId>com.oracle</groupId>
+		<artifactId>ojdbc6</artifactId>
+		<version>11.2.0.1.0</version>
+	</dependency> -->
+	
+	<!-- jstl -->
+	<dependency>
+	    <groupId>jstl</groupId>
+	    <artifactId>jstl</artifactId>
+	    <version>1.2</version>
+    </dependency>
+	<dependency>
+		<groupId>commons-beanutils</groupId>
+		<artifactId>commons-beanutils</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>commons-lang</groupId>
+	    <artifactId>commons-lang</artifactId>
+	    <version>2.6</version>
+	</dependency>
+	<dependency>
+		<groupId>net.sf.ezmorph</groupId>
+		<artifactId>ezmorph</artifactId>
+		<version>1.0.3</version>
+	</dependency>
+	
+	
+	<!-- json -->
+	<dependency>
+	    <groupId>org.json</groupId>
+	    <artifactId>json</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>net.sf.json-lib</groupId>
+		<artifactId>json-lib</artifactId>
+		<version>2.4</version>
+		<classifier>jdk15</classifier>
+	</dependency>
+
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-jta-narayana</artifactId>
+	</dependency>
+	
+	<!-- webSocket -->
+	<dependency>
+        <groupId>javax.websocket</groupId>
+        <artifactId>javax.websocket-api</artifactId>
+        <version>1.1</version>
+        <scope>provided</scope>
+    </dependency>
+   	<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-websocket</artifactId>
+	</dependency>
+	
+	<!-- http -->
+    <dependency> 
+		<groupId>org.apache.httpcomponents</groupId> 
+        <artifactId>httpclient</artifactId> 
+    </dependency>
+    <dependency>
+        <groupId>org.apache.httpcomponents</groupId> 
+        <artifactId>httpclient-cache</artifactId> 
+        <version>4.1.2</version>         
+    </dependency> 
+    <dependency> 
+       <groupId>org.apache.httpcomponents</groupId> 
+       <artifactId>httpmime</artifactId> 
+    </dependency>
+    <dependency>
+	    <groupId>org.apache.httpcomponents</groupId>
+	    <artifactId>httpcore</artifactId>
+	</dependency>
+    <dependency>
+	    <groupId>commons-httpclient</groupId>
+	    <artifactId>commons-httpclient</artifactId>
+	    <version>3.1</version>
+	</dependency>
+	
+  </dependencies>
+  <build>
+    <finalName>myWorld</finalName>
+    <plugins>
+		<plugin>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+			<configuration>
+                <fork>true</fork>
+            </configuration>
+		</plugin>
+	</plugins>
+  </build>
+</project>

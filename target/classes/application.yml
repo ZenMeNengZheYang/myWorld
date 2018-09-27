@@ -1,0 +1,36 @@
+server:
+  port: 8090
+  tomcat:
+    uri-encoding: utf-8
+
+spring:
+  datasource:
+#    url: jdbc:oracle:thin:@192.168.1.185:1521:orcl
+#    username: ucr_iot
+#    password: ucr_iot
+#    driver-class-name: oracle.jdbc.driver.OracleDriver 
+    url: jdbc:mysql://127.0.0.1:3306/me
+    username: ten
+    password: ten
+    driver-class-name: com.mysql.jdbc.Driver 
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+    static-path-pattern: /**
+  jpa:
+    #show-sql: true
+    properties: 
+      hibernate: 
+        hbm2ddl:   
+          auto: update
+#  thymeleaf:
+#    cache: false
+#  jackson:
+#    serialization:
+#      indent_output: true
+
+jobs:
+  fixedDelay: 5000
+  cron: 0/5 * *  * * ?
+
